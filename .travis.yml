@@ -8,9 +8,6 @@ rvm:
   - "2.4.0"
   - "2.5.0"
 
-branches:
-  only: [master]
-
 notifications:
   email: false
 
@@ -26,5 +23,4 @@ script:
 - bundle exec rspec
 
 after_script: 
-- ./cc-test-reporter format-coverage --prefix /home/travis/build/davehenton/rigit
 - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
