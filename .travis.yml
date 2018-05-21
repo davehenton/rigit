@@ -23,4 +23,5 @@ script:
 - bundle exec rspec
 
 after_script: 
-- ./cc-test-reporter cat coverage/.resultset.json after-build -d --exit-code $TRAVIS_TEST_RESULT
+- cat coverage/.resultset.json 
+- ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT
